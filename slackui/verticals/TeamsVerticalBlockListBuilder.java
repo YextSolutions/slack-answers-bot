@@ -55,8 +55,6 @@ public class TeamsVerticalBlockListBuilder implements VerticalBlockListBuilder {
                       COME_FIND_US_TEXT, getTeamLocation(data.floor().orElse(null), building)))
           .ifPresent(blocks::add);
       data.teamOverview().map(textBuilder::buildPlainTextSection).ifPresent(blocks::add);
-      // TODO: For all CTAs, clean the filtering logic to remove startsWith http checks and instead
-      // figure out how to gracefully handle emails and phones as well.
       if ((data.primaryCTA().isPresent()
               && data.primaryCTA().get().label().isPresent()
               && data.primaryCTA().get().link().isPresent())
