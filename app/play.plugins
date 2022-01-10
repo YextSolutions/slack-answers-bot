@@ -1,0 +1,7 @@
+6:plugins.ConfigurationPlugin
+9:plugins.HibernatePlugin
+10:plugins.JodaPlugin
+13:plugins.TracePlugin
+14:plugins.ClosePlugin
+15:plugins.ServerNamePlugin
+16:plugins.SoyPlugin
