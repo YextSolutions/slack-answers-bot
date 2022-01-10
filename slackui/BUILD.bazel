@@ -1,0 +1,19 @@
+package(default_visibility = [
+    "//src/com/yext/developerapps/slackanswersbotapp:__subpackages__",
+    "//test/com/yext/developerapps/slackanswersbotapp:__subpackages__",
+])
+
+java_library(
+    name = "slackui",
+    srcs = glob(["*.java"]),
+    deps = [
+        "//src/com/yext/developerapps/slackanswersbotapp/models",
+        "//src/com/yext/developerapps/slackanswersbotapp/slackui/blockelements",
+        "//src/com/yext/developerapps/slackanswersbotapp/slackui/blocks",
+        "//src/com/yext/developerapps/slackanswersbotapp/slackui/verticals",
+        "//src/com/yext/developerappscommon/exceptions",
+        "//thirdparty:dagger",
+        "//thirdparty:google-guava",
+        "//thirdparty:log4j",
+    ],
+)

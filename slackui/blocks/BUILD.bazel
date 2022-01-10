@@ -1,0 +1,17 @@
+package(default_visibility = [
+    "//src/com/yext/developerapps/slackanswersbotapp:__subpackages__",
+    "//test/com/yext/developerapps/slackanswersbotapp:__subpackages__",
+])
+
+java_library(
+    name = "blocks",
+    srcs = glob(["*.java"]),
+    deps = [
+        "//src/com/yext/developerapps/slackanswersbotapp/models",
+        "//src/com/yext/developerapps/slackanswersbotapp/slackui/blockelements",
+        "//src/com/yext/developerappscommon/exceptions",
+        "//thirdparty:dagger",
+        "//thirdparty:jsr305",
+        "//thirdparty:log4j",
+    ],
+)
