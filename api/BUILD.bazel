@@ -1,0 +1,19 @@
+package(default_visibility = [
+    "//src/com/yext/developerapps/slackanswersbotapp:__subpackages__",
+    "//test/com/yext/developerapps/slackanswersbotapp:__subpackages__",
+])
+
+java_library(
+    name = "api",
+    srcs = glob(["*.java"]),
+    deps = [
+        "//src/com/yext/developerapps/slackanswersbotapp/models",
+        "//src/com/yext/developerappscommon/exceptions",
+        "//src/com/yext/developerappscommon/http",
+        "//src/com/yext/util/http",
+        "//src/com/yext/util/secret",
+        "//thirdparty:apache-httpcore",
+        "//thirdparty:google-guava",
+        "//thirdparty:httpclient",
+    ],
+)
