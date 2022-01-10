@@ -49,8 +49,6 @@ public class OfficesVerticalBlockListBuilder implements VerticalBlockListBuilder
           .map(this::buildAddressString)
           .map(textBuilder::buildPlainTextSection)
           .ifPresent(blocks::add);
-      // TODO: Add logic to add Phone button and to convert phone numbers into urls that Slack can
-      // parse.
       data.officeHandbook()
           .map(handbook -> actionsBlockBuilder.buildBlock(HANDBOOK_BUTTON_TEXT, handbook, null))
           .ifPresent(blocks::add);
