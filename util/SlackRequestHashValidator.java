@@ -23,7 +23,6 @@ public class SlackRequestHashValidator implements SlackRequestValidator {
 
     String hashSignature = computeSignature(timestamp, body);
 
-    // TODO: Replace with an hmac compare method.
     return hashSignature.equals(signature);
   }
 
