@@ -1,0 +1,13 @@
+package(default_visibility = [
+    "//src/com/yext/developerapps/slackanswersbotapp:__subpackages__",
+    "//test/com/yext/developerapps/slackanswersbotapp:__subpackages__",
+])
+
+java_library(
+    name = "models",
+    srcs = glob(["*.java"]),
+    deps = [
+        "//src/com/yext/util/immutables",
+        "//thirdparty:immutables-value",
+    ],
+)
