@@ -52,8 +52,6 @@ public class ResourcesVerticalBlockListBuilder implements VerticalBlockListBuild
       }
       data.name().map(textBuilder::buildBoldMarkdownSection).ifPresent(blocks::add);
       data.richTextDescription().map(textBuilder::buildMarkdownSection).ifPresent(blocks::add);
-      // TODO: For all CTAs, clean the filtering logic to remove startsWith http checks and instead
-      // figure out how to gracefully handle emails and phones as well.
       if ((data.englishCTA().isPresent()
               && data.englishCTA().get().label().isPresent()
               && data.englishCTA().get().link().isPresent())
