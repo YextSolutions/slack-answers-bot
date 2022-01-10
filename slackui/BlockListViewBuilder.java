@@ -153,7 +153,6 @@ public class BlockListViewBuilder implements BlockViewBuilder {
 
   @VisibleForTesting
   SlackBlock buildSnippetBlock(DirectAnswerSnippet snippet, String fieldType) {
-    // TODO: Ask Answers about the field types and update this conditional to make it more robust
     if (fieldType.contains("rich_text")) {
       return textBuildingWrapper.buildMarkdownSection(snippet.value());
     } else {
